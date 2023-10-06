@@ -1,0 +1,38 @@
+Problem Statement
+ You are given an integer array/list(ARR) of size 'N' . it only contains 0s,1s,2s. write a solution to sort this array /list 
+  # most optimized code 
+
+
+  
+//CODE IS HERE BRO 
+  #include <bits/stdc++.h>
+using namespace std;
+void sort012(int *arr, int n)
+{
+   //   Write your code here
+   for(int i=0;i<n-1;i++)
+   {
+      for(int j=0;j<n-1;j++)
+      {
+         if(arr[j]>arr[j+1])
+         {
+            swap(arr[j],arr[j+1]);
+         }
+      }
+   }
+   for(int i=1;i<n;i++)
+   {
+    cout<<arr[i];
+   }
+}
+int main()
+{
+    int arr[1000],n;
+    cin>>n;
+    for(int i=0;i<n;i++)
+    {
+        cin>>arr[i];
+    }
+     sort012(arr,n);
+
+}
